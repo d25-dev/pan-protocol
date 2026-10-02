@@ -71,7 +71,6 @@ acknowledgements of spec §7.7.
 | `expect.code` | the acknowledgement code the receiver sends (spec §6.1) |
 | `expect.stage` | the receive step that decides: `read_frame`, `profile_frame`, `decode_governed`, `profile_inner`, `profile_resource`, `verify_governed`, `profile_payload`, or `pass` |
 | `expect.rule` | the rule id of spec §9 (`accept` / `accept-lenient` for accepted vectors) |
-| `expect.pilot_error` | (optional) a substring of the reference implementation's error text; diagnostic only, not part of the format |
 
 Receiver state assumed by every vector: the receiver knows the case of `fixture.scope_json`, with the
 `sender` as its peer and the parties' keys pinned as in the fixture; for inbox messages the case is active and

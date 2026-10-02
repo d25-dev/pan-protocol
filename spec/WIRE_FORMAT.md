@@ -19,6 +19,13 @@ The key words MUST, MUST NOT, SHOULD, MAY are used as in RFC 2119. "Reference re
 Client's receive path built on the Pilot modules above. Every section ends with **Derived from**, naming the
 Pilot file and function the behaviour was taken from (descriptions only; no code is reproduced).
 
+
+> **Notice.** This document is an independent description of the on-the-wire format that the Agent Network Client
+> exchanges, written to allow interoperable implementations. It describes data formats and procedures only; it
+> contains no source code of Pilot Protocol. Pilot Protocol is a separate project licensed under AGPL-3.0-or-later;
+> this document is not affiliated with or endorsed by its authors. "Pilot" and "Pilot Protocol" may be trademarks of
+> their respective owners. This document grants no trademark or patent rights.
+
 ## Contents
 
 1. Conventions

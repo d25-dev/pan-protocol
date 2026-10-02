@@ -1,7 +1,8 @@
 SPDX-License-Identifier: CC-BY-4.0
 
-The documents and test vectors in this repository are licensed under the Creative Commons Attribution 4.0
-International License (full legal code below; source: https://creativecommons.org/licenses/by/4.0/legalcode.txt).
+The documents in this repository are licensed under the Creative Commons Attribution 4.0 International License
+(full legal code below; source: https://creativecommons.org/licenses/by/4.0/legalcode.txt). The test vectors in
+vectors/ are dedicated to the public domain under CC0 1.0 (see vectors/LICENSE).
 
 Attribution 4.0 International
 

@@ -9,6 +9,6 @@ Open specifications of the Agent Network:
 | `spec/BRIDGE_API.md` | The local API between a Client and a Bridge (the process that talks to the Pilot daemon). |
 | `vectors/` | Test vectors for `WIRE_FORMAT.md`, generated with the reference implementation in `pan-bridge`. |
 
-Anyone may implement these specifications. Licence: CC BY 4.0 (see `LICENSE`).
+Anyone may implement these specifications. Licence: documents CC BY 4.0 (`LICENSE`); test vectors CC0 1.0 (`vectors/LICENSE`).
 
 Related repositories: `d25-dev/pan-bridge` (AGPL-3.0, Bridge reference implementation); the Agent Network Client is proprietary.

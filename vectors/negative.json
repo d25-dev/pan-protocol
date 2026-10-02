@@ -10,8 +10,7 @@
       "accept": false,
       "code": "DENIED_FRAME",
       "stage": "read_frame",
-      "rule": "F-CAP",
-      "pilot_error": "frame too large"
+      "rule": "F-CAP"
     }
   },
   {
@@ -25,8 +24,7 @@
       "accept": false,
       "code": "DENIED_FRAME",
       "stage": "read_frame",
-      "rule": "F-SHORT",
-      "pilot_error": "unexpected EOF"
+      "rule": "F-SHORT"
     }
   },
   {
@@ -40,8 +38,7 @@
       "accept": false,
       "code": "DENIED_FRAME",
       "stage": "read_frame",
-      "rule": "F-SHORT",
-      "pilot_error": "unexpected EOF"
+      "rule": "F-SHORT"
     }
   },
   {
@@ -83,8 +80,7 @@
       "accept": false,
       "code": "DENIED_FRAME",
       "stage": "decode_governed",
-      "rule": "G-JSON",
-      "pilot_error": "unknown field"
+      "rule": "G-JSON"
     }
   },
   {
@@ -98,8 +94,7 @@
       "accept": false,
       "code": "DENIED_FRAME",
       "stage": "decode_governed",
-      "rule": "G-JSON",
-      "pilot_error": "trailing governed envelope data"
+      "rule": "G-JSON"
     }
   },
   {
@@ -113,8 +108,7 @@
       "accept": false,
       "code": "DENIED_FRAME",
       "stage": "decode_governed",
-      "rule": "G-VERSION-TYPE",
-      "pilot_error": "invalid governed frame type"
+      "rule": "G-VERSION-TYPE"
     }
   },
   {
@@ -128,8 +122,7 @@
       "accept": false,
       "code": "DENIED_FRAME",
       "stage": "decode_governed",
-      "rule": "G-PAYLOAD-HASH",
-      "pilot_error": "payload binding mismatch"
+      "rule": "G-PAYLOAD-HASH"
     }
   },
   {
@@ -143,8 +136,7 @@
       "accept": false,
       "code": "DENIED_FRAME",
       "stage": "decode_governed",
-      "rule": "G-FILENAME",
-      "pilot_error": "filename is only valid for file frames"
+      "rule": "G-FILENAME"
     }
   },
   {
@@ -158,8 +150,7 @@
       "accept": false,
       "code": "DENIED_FRAME",
       "stage": "decode_governed",
-      "rule": "G-UNSIGNED",
-      "pilot_error": "must be signed"
+      "rule": "G-UNSIGNED"
     }
   },
   {
@@ -173,8 +164,7 @@
       "accept": false,
       "code": "DENIED_FRAME",
       "stage": "decode_governed",
-      "rule": "G-ACTION",
-      "pilot_error": "action does not match frame type"
+      "rule": "G-ACTION"
     }
   },
   {
@@ -188,8 +178,7 @@
       "accept": false,
       "code": "DENIED_FRAME",
       "stage": "decode_governed",
-      "rule": "G-INTENT",
-      "pilot_error": "validity exceeds"
+      "rule": "G-INTENT"
     }
   },
   {
@@ -203,8 +192,7 @@
       "accept": false,
       "code": "DENIED_FRAME",
       "stage": "decode_governed",
-      "rule": "G-INTENT",
-      "pilot_error": "nonce must be 32 lowercase hex"
+      "rule": "G-INTENT"
     }
   },
   {
@@ -288,8 +276,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-INTENT-SIG",
-      "pilot_error": "intent signature verification failed"
+      "rule": "V-INTENT-SIG"
     }
   },
   {
@@ -303,8 +290,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-DECISION-SIG",
-      "pilot_error": "decision signature verification failed"
+      "rule": "V-DECISION-SIG"
     }
   },
   {
@@ -318,8 +304,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-INTENT-SIG",
-      "pilot_error": "intent signature verification failed"
+      "rule": "V-INTENT-SIG"
     }
   },
   {
@@ -333,8 +318,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-DECISION-SIG",
-      "pilot_error": "decision signature verification failed"
+      "rule": "V-DECISION-SIG"
     }
   },
   {
@@ -348,8 +332,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-INTENT-SIG",
-      "pilot_error": "invalid intent signature encoding"
+      "rule": "V-INTENT-SIG"
     }
   },
   {
@@ -363,8 +346,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-INTENT-KEY",
-      "pilot_error": "resolve intent key"
+      "rule": "V-INTENT-KEY"
     }
   },
   {
@@ -378,8 +360,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-DECISION-KEY",
-      "pilot_error": "resolve decision key"
+      "rule": "V-DECISION-KEY"
     }
   },
   {
@@ -393,8 +374,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-INTENT-FRESH",
-      "pilot_error": "intent is expired"
+      "rule": "V-INTENT-FRESH"
     }
   },
   {
@@ -408,8 +388,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-INTENT-FRESH",
-      "pilot_error": "intent is not yet valid"
+      "rule": "V-INTENT-FRESH"
     }
   },
   {
@@ -423,8 +402,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-DECISION-FRESH",
-      "pilot_error": "decision is expired"
+      "rule": "V-DECISION-FRESH"
     }
   },
   {
@@ -438,8 +416,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-BIND-HASH",
-      "pilot_error": "bound to a different intent"
+      "rule": "V-BIND-HASH"
     }
   },
   {
@@ -453,8 +430,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-BIND-TENANT-AGENT",
-      "pilot_error": "tenant or agent binding mismatch"
+      "rule": "V-BIND-TENANT-AGENT"
     }
   },
   {
@@ -468,8 +444,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-BIND-EXPIRY",
-      "pilot_error": "decision expiry expands intent authority"
+      "rule": "V-BIND-EXPIRY"
     }
   },
   {
@@ -483,8 +458,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-BIND-ISSUED",
-      "pilot_error": "decision predates intent"
+      "rule": "V-BIND-ISSUED"
     }
   },
   {
@@ -498,8 +472,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-STATE",
-      "pilot_error": "stale revocation epoch"
+      "rule": "V-STATE"
     }
   },
   {
@@ -513,8 +486,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-STATE",
-      "pilot_error": "stale policy revision"
+      "rule": "V-STATE"
     }
   },
   {
@@ -528,8 +500,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-CEILING",
-      "pilot_error": "local authority ceiling"
+      "rule": "V-CEILING"
     }
   },
   {
@@ -543,8 +514,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-CEILING",
-      "pilot_error": "local authority ceiling"
+      "rule": "V-CEILING"
     }
   },
   {
@@ -558,8 +528,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-CEILING",
-      "pilot_error": "local authority ceiling"
+      "rule": "V-CEILING"
     }
   },
   {
@@ -573,8 +542,7 @@
       "accept": false,
       "code": "DENIED_PROOF",
       "stage": "verify_governed",
-      "rule": "V-OUTCOME",
-      "pilot_error": "cannot permit delivery"
+      "rule": "V-OUTCOME"
     }
   },
   {
@@ -588,8 +556,7 @@
       "accept": false,
       "code": "DENIED_GRANT",
       "stage": "profile_payload",
-      "rule": "M-SIG",
-      "pilot_error": "mandate signature verification failed"
+      "rule": "M-SIG"
     }
   },
   {
@@ -603,8 +570,7 @@
       "accept": false,
       "code": "DENIED_GRANT",
       "stage": "profile_payload",
-      "rule": "M-SIG",
-      "pilot_error": "mandate signature verification failed"
+      "rule": "M-SIG"
     }
   },
   {
@@ -632,8 +598,7 @@
       "accept": false,
       "code": "DENIED_GRANT",
       "stage": "profile_payload",
-      "rule": "M-FRESH",
-      "pilot_error": "mandate is expired"
+      "rule": "M-FRESH"
     }
   },
   {
@@ -647,8 +612,7 @@
       "accept": false,
       "code": "DENIED_GRANT",
       "stage": "profile_payload",
-      "rule": "M-JSON",
-      "pilot_error": "not the canonical JSON"
+      "rule": "M-JSON"
     }
   },
   {
@@ -676,8 +640,7 @@
       "accept": false,
       "code": "DENIED_MESSAGE",
       "stage": "profile_payload",
-      "rule": "B-MESSAGE",
-      "pilot_error": "not the canonical JSON"
+      "rule": "B-MESSAGE"
     }
   },
   {
