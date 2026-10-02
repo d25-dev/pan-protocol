@@ -1,0 +1,44 @@
+{
+  "description": "Shared inputs for all pan-protocol wire vectors. Seeds are Ed25519 RFC 8032 private seeds (hex). Synthetic data only.",
+  "generator": "pan-bridge/cmd/vectors with github.com/pilot-protocol/common v0.5.13 and github.com/pilot-protocol/dataexchange v0.2.2",
+  "tenant": "anv-client-m1",
+  "t0": 1893456000,
+  "frame_cap": 65536,
+  "max_envelope": 16384,
+  "proof_ttl": 60,
+  "parties": [
+    {
+      "party": "alice",
+      "addr": "0:0000.0000.0001",
+      "transport_key": "cb31c57164d2447ce09c080eea8163bd1845fd93ffb9ddc879c94308abd992b1",
+      "intent_key": "5402b83bf89e9b588d43d837cb6bda4165809596cb5192fb895e0e6646866d26",
+      "authority_key": "88b07b1bf6a342c16ad9b2deda2ae6d6da3482eb0e19cce7b3c4ef635f4a7da4",
+      "intent_seed": "2c47ca73100dcbdfda92b8f5097f7ad6d6ecd71da92a133a8e8741344ffa422f",
+      "authority_seed": "2a20ff29a27ccb1d543cb9a8cea871505f1f7f0a3ed89c214813e374a62a2be7"
+    },
+    {
+      "party": "bob",
+      "addr": "0:0000.0000.0002",
+      "transport_key": "482e338acf8dcccb79c04186e74b24b3d507eabb5f6e02d5a631d829b93be207",
+      "intent_key": "41f4ec220be84ed568fb4f8ed7c535493ddfb3e1177ac885a9d137fc7c9b03f1",
+      "authority_key": "79ff51ed734f73d02a3090f8cfd6b4d3981c2bca1bc8769814f2766538f4f6d1",
+      "intent_seed": "0f7882aafe9e6ee914b4aaf510df2d54e37978916d9deac18b2e765ab3c72db8",
+      "authority_seed": "ffe95c76f78e8c7244007fbeca131f86410f7d378b09553369e723cc055284a7"
+    },
+    {
+      "party": "carol",
+      "addr": "0:0000.0000.0003",
+      "transport_key": "5b11de1bcd5934b6a4516437e13c61b7363045c495f3314861c20daf453e49b0",
+      "intent_key": "75b8dee617100ec3520370194b0253b43583ca2b1edb4568cb619b3f5544bc34",
+      "authority_key": "de6ad0931acf3e1d688463b8e720096d873e1e36b7a89cf20ef7ae6abd309147",
+      "intent_seed": "4664cde3c56b6b7cf09d8fabeb48076e7d82d4522dff6dff0a7f652c1503750e",
+      "authority_seed": "c2574af20a7ad294f6fedd263d2dabbca698e76723524acb4f1bb18240688a05"
+    }
+  ],
+  "scope_json": "{\"schema_version\":1,\"case_id\":\"case-0123456789abcdef\",\"generation\":1,\"template_id\":\"finite-choice-v1\",\"purpose_code\":\"schedule\",\"initiator\":\"alice\",\"participants\":[{\"party\":\"alice\",\"addr\":\"0:0000.0000.0001\",\"transport_key\":\"cb31c57164d2447ce09c080eea8163bd1845fd93ffb9ddc879c94308abd992b1\",\"intent_key\":\"5402b83bf89e9b588d43d837cb6bda4165809596cb5192fb895e0e6646866d26\",\"authority_key\":\"88b07b1bf6a342c16ad9b2deda2ae6d6da3482eb0e19cce7b3c4ef635f4a7da4\"},{\"party\":\"bob\",\"addr\":\"0:0000.0000.0002\",\"transport_key\":\"482e338acf8dcccb79c04186e74b24b3d507eabb5f6e02d5a631d829b93be207\",\"intent_key\":\"41f4ec220be84ed568fb4f8ed7c535493ddfb3e1177ac885a9d137fc7c9b03f1\",\"authority_key\":\"79ff51ed734f73d02a3090f8cfd6b4d3981c2bca1bc8769814f2766538f4f6d1\"}],\"catalog\":{\"s1\":\"2030-01-02 09:00\",\"s2\":\"2030-01-02 10:00\",\"s3\":\"2030-01-02 11:00\",\"s4\":\"2030-01-03 09:00\"},\"disclosure_by_party\":{\"alice\":[\"s1\",\"s2\"],\"bob\":[\"s2\",\"s3\"]},\"actions\":[\"offer\",\"result\",\"confirm_result\"],\"max_messages_per_side\":32,\"max_payload\":16384,\"expires_at\":1893542400,\"policy_revision\":1}",
+  "scope_hash": "e29997572e9d6ed0ac254b3918ac710b981e0216ab59a677b28927d6499fe221",
+  "escape_scope_json": "{\"schema_version\":1,\"case_id\":\"case-escape-0001\",\"generation\":1,\"template_id\":\"finite-choice-v1\",\"purpose_code\":\"schedule\",\"initiator\":\"alice\",\"participants\":[{\"party\":\"alice\",\"addr\":\"0:0000.0000.0001\",\"transport_key\":\"cb31c57164d2447ce09c080eea8163bd1845fd93ffb9ddc879c94308abd992b1\",\"intent_key\":\"5402b83bf89e9b588d43d837cb6bda4165809596cb5192fb895e0e6646866d26\",\"authority_key\":\"88b07b1bf6a342c16ad9b2deda2ae6d6da3482eb0e19cce7b3c4ef635f4a7da4\"},{\"party\":\"bob\",\"addr\":\"0:0000.0000.0002\",\"transport_key\":\"482e338acf8dcccb79c04186e74b24b3d507eabb5f6e02d5a631d829b93be207\",\"intent_key\":\"41f4ec220be84ed568fb4f8ed7c535493ddfb3e1177ac885a9d137fc7c9b03f1\",\"authority_key\":\"79ff51ed734f73d02a3090f8cfd6b4d3981c2bca1bc8769814f2766538f4f6d1\"}],\"catalog\":{\"s1\":\"a\\u003cb\\u003e\\u0026c\\u2028d\\u2029e\",\"s2\":\"q\\\"uote\\\\back\\u0001ctl\",\"s3\":\"日本 café\",\"s4\":\"plain\"},\"disclosure_by_party\":{\"alice\":[\"s1\",\"s2\"],\"bob\":[\"s2\",\"s3\"]},\"actions\":[\"offer\",\"result\",\"confirm_result\"],\"max_messages_per_side\":32,\"max_payload\":16384,\"expires_at\":1893542400,\"policy_revision\":1}",
+  "escape_scope_hash": "1796286b53d7330a7edab5210c13eef8a74b52d531d3c811e4405ab3d7f3c6e3",
+  "purpose": "schedule:e29997572e9d6ed0ac254b3918ac710b981e0216ab59a677b28927d6499fe221",
+  "mandate_issued_at": 1893452400
+}
