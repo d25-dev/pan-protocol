@@ -12,3 +12,5 @@ Open specifications of the Agent Network:
 Anyone may implement these specifications. Licence: documents CC BY 4.0 (`LICENSE`); test vectors CC0 1.0 (`vectors/LICENSE`).
 
 Related repositories: `d25-dev/pan-bridge` (AGPL-3.0, Bridge reference implementation); the Agent Network Client is proprietary.
+
+Copyright (c) 2026 Yuya Uwatoko.
