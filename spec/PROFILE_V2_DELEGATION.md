@@ -84,8 +84,10 @@ revokes the case and approves a new one.
   (macOS: Keychain item with a user-presence access control; Touch ID or the login password). It is used only
   to sign grants. Replacing it follows the existing key-change review (`KEY_CHANGE_REQUIRES_REVIEW`).
 - **Delegate key**: generated when the owner approves the case, in the same step as the grant. The private
-  key is stored with the case and deleted when the case is closed, revoked, or expired. It is never reused
-  across cases.
+  key is stored with the case and never reused across cases. It is deleted:
+  - at once when the case is closed, revoked by the peer, or expires;
+  - when the owner revokes the case: as soon as the revoke message (which is signed with this key, §4) is no
+    longer pending — delivered, rejected or cancelled — or the case expires, whichever comes first.
 - **Approval is one owner action**: one presence check signs the grant; nothing else in the case needs the
   owner again until the result.
 
