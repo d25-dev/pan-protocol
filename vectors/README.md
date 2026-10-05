@@ -94,3 +94,15 @@ go test -count=1 -v ./cmd/vectors
 The generator refuses to write if any vector fails its own check. The test regenerates the vectors, checks
 that generation is deterministic and identical to these files, then parses these files and re-verifies each
 vector from its serialized fields with the Pilot code.
+
+## Profile v2 (`v2.json`)
+
+Vectors for `spec/PROFILE_V2_DELEGATION.md`. Parties and authority keys are those of `fixture.json`.
+
+| member | content |
+|---|---|
+| `fixture` | the v2 scope (`schema_version` 2) and its hash, the constraint key, the delegate key seeds per party, and the seed of a delegate key of another case |
+| `grants` | v2 grants (Mandates with one `pan.delegate.ed25519` constraint), as object vectors (canonical bytes, hash, signature) |
+| `frames` | frame vectors as in `frames.json` / `negative.json`, plus `stored_grant`: the id of the peer grant the receiver has already accepted for the case (absent: none) |
+
+A conforming v2 receiver MUST return `expect.code` for every frame, given the stated stored grant.
