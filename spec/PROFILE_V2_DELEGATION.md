@@ -13,7 +13,7 @@ v2 splits the keys, on **one device** (no second device is required):
 
 | key | held where | used for | owner presence |
 |---|---|---|---|
-| **authority key** (Ed25519) | the device's protected key store (e.g. macOS Keychain); never exported | signing grants (approving a case) | REQUIRED for every signature on devices that support it (Touch ID / password) |
+| **authority key** (Ed25519) | the device's protected key store (e.g. macOS Keychain); never leaves the device and is never written outside that store (it is loaded into the Client's memory only for the moment of a signature, because current secure elements cannot hold Ed25519 keys) | signing grants (approving a case) | REQUIRED for every signature on devices that support it (Touch ID / password) |
 | **delegate key** (Ed25519, one per case per party) | the Client's normal storage | signing every Intent and Decision of that case | not required: automation runs with it |
 
 A party approves a case by signing a grant that **names its delegate key**. A peer checks the grant with the
@@ -65,9 +65,10 @@ The ceiling (WIRE_FORMAT §6.2 step 8) checks `decision.provider_id` = `<peer>-c
 `<peer>-authority`; all other ceiling conditions are unchanged.
 
 Where the peer's grant comes from:
-- **Invite** (resource kind `invite`): the grant is the invite's payload. The receiver MUST first decode the
-  payload strictly and verify it as a grant of (peer → self, this scope) under the peer's pinned authority key
-  (`DENIED_GRANT`), and only then verify the frame's proofs with the delegate key it names (`DENIED_PROOF`).
+- **Invite** (resource kind `invite`): the grant is the invite's payload. The receiver MUST first check that
+  `intent.id` is `invite`, decode the payload strictly and verify it as a grant of (peer → self, this scope)
+  under the peer's pinned authority key (all `DENIED_GRANT`), and only then verify the frame's proofs with the
+  delegate key it names (`DENIED_PROOF`).
   This is the one change to the receive order (CASE_PROTOCOL §6 step 5 and 6 swap for invites only). The
   payload is still not stored before every check passed.
 - **Business messages and revoke**: the peer's grant stored when its invite was accepted. If there is none,
@@ -91,7 +92,14 @@ revokes the case and approves a new one.
 - **Approval is one owner action**: one presence check signs the grant; nothing else in the case needs the
   owner again until the result.
 
-## 7. Security notes
+## 7. Profile choice and v1
+
+- New cases SHOULD use v2. v1 signs every Decision with the authority key, so a Client whose authority key
+  requires owner presence for each signature (§6) cannot run v1 cases without a presence check per message;
+  such a Client MAY refuse to approve v1 scopes.
+- v1 remains specified for existing cases and for peers that do not implement v2.
+
+## 8. Security notes
 
 - Compromise of the Client process or an Agent: the attacker can send, within already-approved cases, what the
   case scope allows until expiry; it cannot approve new cases, enroll contacts, or change keys.
@@ -99,7 +107,7 @@ revokes the case and approves a new one.
 - Compromise of the authority key: as in v1 (full control of new approvals); hence the presence requirement.
 - Receivers keep the v1 duplicate and limit rules; nothing in v2 widens what a case permits.
 
-## 8. Vectors
+## 9. Vectors
 
 `vectors/` will contain v2 vectors: a v2 grant with a delegate constraint, invite/offer/revoke frames signed
 with delegate keys, and negative cases (grant without or with two delegate constraints, proof signed by the
