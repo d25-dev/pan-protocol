@@ -72,8 +72,9 @@ Where the peer's grant comes from:
   This is the one change to the receive order (CASE_PROTOCOL §6 step 5 and 6 swap for invites only). The
   payload is still not stored before every check passed.
 - **Business messages and revoke**: the peer's grant stored when its invite was accepted. If there is none,
-  the proofs cannot be verified (`DENIED_PROOF`); a sender keeps retrying until its invite was accepted
-  (unchanged retry rules).
+  the case cannot be active on the receiver: it answers `NOT_YET_ACTIVE` (nothing stored; the sender retries,
+  CASE_PROTOCOL §7) while the case is draft or approved and not expired, and `DENIED_NOT_ACTIVE` otherwise. This
+  happens when a message overtakes its own invite, e.g. after the receiver was unavailable.
 
 A new grant from the same peer for the same case (a re-sent invite) MUST name the same delegate key; a
 different key is rejected (`DENIED_GRANT`). Changing a delegate key mid-case is not supported in v2: the owner

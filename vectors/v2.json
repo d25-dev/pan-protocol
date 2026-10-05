@@ -209,7 +209,7 @@
     },
     {
       "id": "v2-neg-offer-no-grant",
-      "description": "offer before any grant of the peer was accepted",
+      "description": "offer before any grant of the peer was accepted (overtook its invite): retry later",
       "sender": "alice",
       "receiver": "bob",
       "verify_at": 1893456000,
@@ -219,7 +219,7 @@
       "intent_hash": "3e4d6d936e67727d80d4a050438729187db85b341aee962ed69900a32fcd8673",
       "expect": {
         "accept": false,
-        "code": "DENIED_PROOF",
+        "code": "NOT_YET_ACTIVE",
         "stage": "verify_governed",
         "rule": ""
       }
